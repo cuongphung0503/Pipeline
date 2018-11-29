@@ -15,7 +15,7 @@ phases:
        - apt-get update -y
        - apt-get install zip -y
        - apt-get install git -y
-       - apt-get install mysql-server
+       - apt-get install mysql-server -y
        - git config --global credential.helper '!aws codecommit credential-helper $@'
        - git config --global credential.UseHttpPath true
        - ZIP_FILE=feasibility`date +%y%m%d%H%M%S`.zip
