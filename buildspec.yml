@@ -24,7 +24,7 @@ phases:
       # - command
   build:
     commands:
-        - ls
+        - ls -lt
         - cd /var/www/html
         - git clone https://github.com/cuongphung0503/Pipeline.git
       # - command
