@@ -21,7 +21,7 @@ phases:
     #finally:
       # - command
       # - command
-  pre_build:
+  build:
     commands:
         - cd /var/www/html
         - git clone https://github.com/cuongphung0503/Pipeline.git
