@@ -1,0 +1,52 @@
+version: 0.2
+
+#env:
+  #variables:
+     #  key: `date`
+     # key: "value"
+  #parameter-store:
+     # key: "value"
+     # key: "value"
+
+phases:
+  install:
+    commands:
+       - echo update started on `date`
+       - apt-get update -y
+       - apt-get install zip -y
+       - apt-get install git -y
+       - git config --global credential.helper '!aws codecommit credential-helper $@'
+       - git config --global credential.UseHttpPath true
+       - ZIP_FILE=feasibility`date +%y%m%d%H%M%S`.zip
+    #finally:
+      # - command
+      # - command
+  pre_build:
+    commands:
+        - cd /var/www/html
+        - git clone https://github.com/cuongphung0503/Pipeline.git
+      # - command
+    #finally:
+      # - command
+      # - command
+    #finally:
+      # - command
+      # - command
+  #post_build:
+    #commands:
+      # - command
+      # - command
+    #finally:
+      # - command
+      # - command
+#artifacts:
+  #files:
+    # - location
+    # - location
+    # - name
+  #discard-paths: yes
+  #base-directory: location
+#cache:
+  #paths:
+    # - path
+    # - path
